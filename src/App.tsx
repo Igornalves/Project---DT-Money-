@@ -1,12 +1,13 @@
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
+import Transactions from "./pages/Transactions/intex";
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle /> 
-      <h1>Hello Word !!!</h1>
+      <Transactions/>
     </ThemeProvider>
   )
 }
