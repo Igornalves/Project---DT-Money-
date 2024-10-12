@@ -1,13 +1,17 @@
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
-import Transactions from "./pages/Transactions/intex";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes/Routes";
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
+      <BrowserRouter>
+        <Router/>
+      </BrowserRouter>
+
       <GlobalStyle /> 
-      <Transactions/>
     </ThemeProvider>
   )
 }
