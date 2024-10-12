@@ -6,7 +6,6 @@ export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle /> 
-
       <h1>Hello Word !!!</h1>
     </ThemeProvider>
   )
