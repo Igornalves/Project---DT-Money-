@@ -1,5 +1,6 @@
 import Header from "../../components/Header/intex";
 import Summary from "../../components/Summary/intex";
+import SearchForm from "./components/SearchForm/intex";
 import { 
     PriceHighLight, 
     TransactionsConteiner, 
@@ -13,6 +14,7 @@ export default function Transactions() {
             <Summary/>
 
             <TransactionsConteiner>
+                <SearchForm/>
                 <TransactionsTable>
                     <tbody>
                         <tr>
