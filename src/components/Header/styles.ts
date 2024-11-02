@@ -5,6 +5,19 @@ export const HeaderConteiner = styled.header`
     padding: 2.5rem 0 7.5rem;
 `
 
+export const DivTitule = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const Text = styled.text`
+    margin-left: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+`
+
 export const HeaderContent = styled.div`
     width: 100%;
     max-width: 1120px;
