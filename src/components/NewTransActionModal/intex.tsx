@@ -16,8 +16,16 @@ type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
 export default function NewTransActionModal() {
 
-    const { control ,register, handleSubmit, formState: { isSubmitted } } = useForm<NewTransactionFormInputs>({
-        resolver: zodResolver(newTransactionFormSchema)
+    const { 
+        control, 
+        register, 
+        handleSubmit, 
+        formState: { isSubmitted } 
+    } = useForm<NewTransactionFormInputs>({
+        resolver: zodResolver(newTransactionFormSchema),
+        defaultValues: {
+            type: 'income'
+        }
     })
 
     async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
@@ -75,7 +83,7 @@ export default function NewTransActionModal() {
                         }}
                     />
 
-                    <button type='submit' disabled={  isSubmitted }>
+                    <button type='submit' disabled={ isSubmitted }>
                         Cadastrar
                     </button>
                 </form>
