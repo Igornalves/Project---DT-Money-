@@ -82,7 +82,6 @@ export default function NewTransActionModal() {
                             )
                         }}
                     />
-
                     <button type='submit' disabled={ isSubmitted }>
                         Cadastrar
                     </button>
