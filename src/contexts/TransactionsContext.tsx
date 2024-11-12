@@ -34,15 +34,25 @@ export function TransactionsProvider({ children }: TransactionsProviderProps){
     const [transactions, setTransactions] = useState<transaction[]>([])
 
     async function fetchTransactions(query?: string){
+        // console.log('Fetching with query:', query);
+
         const response = await api.get('transactions', {
             params:{
                 _sort: 'price',
                 _order: 'asc',
-                q: query
+                // description_like: query,
+                // q: query
             }
         })
 
-        setTransactions(response.data)
+        const filteredData = query
+        ? response.data.filter((transaction: transaction) => 
+            transaction.description.toLowerCase().includes(query.toLowerCase())
+          )
+        : response.data;
+
+        // console.log('Response data:', response.data);
+        setTransactions(filteredData)
     }
 
     async function createTransaction(data: CreateTransactionInput) {
