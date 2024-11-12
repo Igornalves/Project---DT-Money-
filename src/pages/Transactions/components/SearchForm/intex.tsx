@@ -22,7 +22,7 @@ export default function SearchForm() {
 
     async function handleSearchTransactions(data: SearchFormInputs) {
         await fetchTransactions(data.query)
-        // console.log(data)
+        console.log(data)
     }
 
     return(

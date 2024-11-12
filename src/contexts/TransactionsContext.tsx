@@ -33,19 +33,10 @@ export function TransactionsProvider({ children }: TransactionsProviderProps){
 
         console.log("Fetch URL:", url.toString());
 
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Erro ${response.status}: ${response.statusText}`);
-            }
-            const data = await response.json();
-            setTransactions(data);
-        } catch (error) {
-            console.error("Erro ao buscar transações:", error); // Debug: Captura de erros
-        }
-        // const response = await fetch(url)
-        // const data = await response.json()
-        // setTransactions(data)
+        const response = await fetch(url)
+        const data = await response.json()
+
+        setTransactions(data)
     }
 
     useEffect(() => {
