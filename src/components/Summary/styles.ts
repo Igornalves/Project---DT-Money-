@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SummaryConteiner = styled.section`
     width: 100%;
@@ -17,7 +17,7 @@ interface SummaryCard {
     variant?: 'green';
 }
 
-export const SummaryCard = styled.div`
+export const SummaryCard = styled.div<SummaryCard>`
     background-color: ${props => props.theme['gray-600']};
     border-radius: 6px;
     padding: 2rem;
@@ -34,5 +34,9 @@ export const SummaryCard = styled.div`
         margin-top: 1rem;
         font-size: 2rem;
     }
+
+    ${props => props.variant === 'green' && css`
+        background-color: ${props.theme['green-700']};
+    `}
 `
 
