@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+# Projeto DT-Money 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto que tem o intuito de fazer com que os users consiguam ver suas parts finaceiras completas e verificar o que ta saindo e entrando de dinheiro no final do mes
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação e Configuração](#instalação-e-configuração)
+- [Execução do Projeto](#execução-do-projeto)
 
-## Expanding the ESLint configuration
+## Tecnologias e Ferramentas Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<div style="display: inline_block"  align="center">
+  <img align="center" alt="TypeScript" height="49" width="51" src="https://skillicons.dev/icons?i=typescript">
+  <img align="center" alt="React" height="49" width="51" src="https://skillicons.dev/icons?i=react">
+  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=nodejs">
+  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=figma">
+  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=styledcomponents">
+  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=vercel">
+</div>
 
-- Configure the top-level `parserOptions` property like this:
+<br>
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React.js
+- Node.js
+- react-router-dom
+- react icons
+- styled-components
+- vercel
+- Figma
+
+## Estrutura do Projeto
+
+Toda a sua arquitetura de pagina e seu desing foi feito como prototipacao no Figma Community
+onde foi acompanhado o processo de criacao da interface e tambem para implementacao para ser algo parecido
+
+<img src="../DT-Money/src/assets/[Desktop] Home.png">
+
+## Pré-requisitos
+
+Algums Pré-requisitos importantes para vc poder rodar o projeto na sua maquina local seria vc ter instalado as seguintes ferramentas que sao:
+
+<div style="display: inline_block"  align="center">
+  <img align="center" alt="Python" height="49" width="51" src="https://skillicons.dev/icons?i=nodejs">
+</div>
+
+<br>
+
+- Node.js
+
+## Instalação e Configuração
+
+primeiro passo para vc conseguir executar o projeto de forma local seria usando o git instalado na sua maquina para fazer um clone do projeto para alguma pasta que vc deseja fazer isso.
+
+crie uma pasta:
+
+<Img src='https://www.ciabyte.com.br/imagens/pastas-windows-explorer.png'>
+
+Apos cria sua pasta vc vai entra no vscode para utilizar o seguinte comando no terminal
+
+```powershell
+git clone https://github.com/Igornalves/Project_DT-Money.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Excutando o Projeto de forma local
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Com o projeto ja estando clonado vc agora vc poder instalar todas as dependencias do projeto usando o seguinte comandado
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```terminal
+npm install 
 ```
+
+agora com todas as dependencias instaladas vc pode executar o projeto de forma completa 
+
+```
+npm run dev
+```
+
+Desta forma agora vc podera usar o site e tambem fazer alteracoes no codigo fonte do projeto.
