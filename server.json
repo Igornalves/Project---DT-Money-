@@ -47,6 +47,14 @@
       "price": 250,
       "type": "outcome",
       "createdAt": "2024-11-12T13:35:27.089Z"
+    },
+    {
+      "id": "9c78",
+      "description": "igor",
+      "category": "Documento",
+      "price": 675,
+      "type": "outcome",
+      "createdAt": "2024-11-12T17:02:38.470Z"
     }
   ]
 }
