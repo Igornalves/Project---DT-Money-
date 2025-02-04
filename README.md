@@ -1,4 +1,4 @@
-#DT-Money Project
+# DT-Money Project
 
 Project that aims to allow users to see their complete financial statements and check what money is coming in and out at the end of the month.
 
